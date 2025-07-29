@@ -13,7 +13,7 @@ onMounted(() => {
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
-    center: [0, 20],
+    center: [0, 0],
     zoom: 0.5,
     minZoom: 0,
     maxBounds: [
@@ -40,7 +40,7 @@ onMounted(() => {
   })
 
   const secondsPerRevolution = 1000
-  const maxSpinZoom = 5
+  const maxSpinZoom = 10
   const slowSpinZoom = 3
 
   let userInteracting = false
@@ -56,7 +56,7 @@ onMounted(() => {
       }
       const center = map.getCenter()
       center.lng -= distancePerSecond
-      map.easeTo({ center, duration: 2000, easing: (n) => n })
+      map.easeTo({ center, duration: 1000, easing: (n) => n })
     }
   }
 

@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import MapboxGlobe from './components/MapboxGlobe.vue';
+import MapboxGlobe from './components/map/MapboxGlobe.vue';
+import LoginModal from './components/modal/LoginModal.vue';
 
 </script>
 
 <template>
   <div class="h-screen">
-    <MapboxGlobe />
+    <UApp>
+      <MapboxGlobe />
+      <LoginModal />
+    </UApp>
   </div>
 </template>
