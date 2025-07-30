@@ -20,36 +20,55 @@
             Para iniciar... defina seu apelido
           </h3>
         </div>
-        <div class="w-full">
-          <Form>
-            <UFormField size="xl" label="Apelido" class="w-full" required>
-              <UInput ref="nicknameInput" placeholder="Informe o seu apelido" class="w-full mt-1" />
-            </UFormField>
 
-            <UButton
-              size="xl"
-              class="w-full flex justify-center text-center mt-8 mb-2 py-2.5 cursor-pointer"
-              variant="solid"
-              color="primary"
-              type="submit"
-            >
-              <Rocket class="size-6 mr-1" />
-              Iniciar Jornada
-            </UButton>
-          </Form>
-        </div>
+        <UForm
+          :schema="schema"
+          :state="form"
+          @submit="onSubmit"
+          validate-on="submit"
+          class="w-full"
+        >
+          <UFormField name="username" size="xl" label="Apelido" class="w-full" required>
+            <UInput
+              ref="nicknameInput"
+              v-model="form.username"
+              placeholder="Informe o seu apelido"
+              class="w-full mt-1"
+            />
+          </UFormField>
+
+          <UButton
+            size="xl"
+            class="w-full flex justify-center text-center mt-8 mb-2 py-2.5 cursor-pointer"
+            variant="solid"
+            color="primary"
+            type="submit"
+          >
+            <Rocket class="size-6 mr-1" />
+            Iniciar Jornada
+          </UButton>
+        </UForm>
       </section>
     </template>
   </UModal>
 </template>
 
 <script setup lang="ts">
-  import { LockKeyhole, LogIn, Rocket } from 'lucide-vue-next'
-  import { nextTick, ref, watch } from 'vue'
+  import { Rocket } from 'lucide-vue-next'
+  import { nextTick, ref, watch, reactive } from 'vue'
   import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+  import { useToast } from '@nuxt/ui/runtime/composables/useToast.js'
+  import { useUserStore } from '../../stores/user'
+  import * as z from 'zod'
 
-  const nicknameInput = ref<HTMLInputElement | null>(null)
+  const user = useUserStore()
+  const toast = useToast()
   const open = ref(true)
+  const nicknameInput = ref<HTMLInputElement | null>(null)
+
+  const form = reactive({
+    username: '',
+  })
 
   watch(open, async val => {
     if (val) {
@@ -57,4 +76,22 @@
       nicknameInput.value?.focus()
     }
   })
+
+  const schema = z.object({
+    username: z.string().min(2, 'Mínimo 2 caracteres').max(100, 'Máximo 100 caracteres'),
+  })
+
+  const onSubmit = (values: any) => {
+    const username = values.data.username.trim()
+    user.setName(username)
+
+    toast.clear()
+    toast.add({
+      title: `Falaa, ${username}!`,
+      description: `Seja muito bem-vindo(a) 👋`,
+      color: 'success',
+    })
+
+    open.value = false
+  }
 </script>

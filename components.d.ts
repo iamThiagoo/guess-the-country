@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ControlCard: typeof import('./src/components/card/ControlCard.vue')['default']
     Login: typeof import('./src/components/modal/Login.vue')['default']
     LoginModa: typeof import('./src/components/modal/LoginModa.vue')['default']
     LoginModal: typeof import('./src/components/modal/LoginModal.vue')['default']
@@ -16,6 +17,8 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     UApp: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
     UButton: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
+    UCard: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Card.vue')['default']
+    UForm: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Form.vue')['default']
     UFormField: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
     UInput: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Input.vue')['default']
     UModal: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Modal.vue')['default']

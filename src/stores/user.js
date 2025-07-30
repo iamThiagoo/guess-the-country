@@ -1,3 +1,5 @@
+import { defineStore } from 'pinia'
+
 export const useUserStore = defineStore('user', {
   state: () => ({
     name: '',
@@ -19,14 +21,5 @@ export const useUserStore = defineStore('user', {
       this.correctAnswers = 0
     },
   },
-
-  persist: {
-    enabled: true,
-    strategies: [
-      {
-        storage: localStorage,
-        paths: ['name', 'correctAnswers'],
-      },
-    ],
-  },
+  persist: true,
 })
