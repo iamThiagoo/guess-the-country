@@ -1,22 +1,22 @@
-export const useUserStore = defineStore("user", {
+export const useUserStore = defineStore('user', {
   state: () => ({
-    name: "",
+    name: '',
     correctAnswers: 0,
   }),
 
   actions: {
     setName(name) {
-      this.name = name;
+      this.name = name
     },
     incrementCorrectAnswers() {
-      this.correctAnswers++;
+      this.correctAnswers++
     },
     reset() {
-      this.name = "";
-      this.correctAnswers = 0;
+      this.name = ''
+      this.correctAnswers = 0
     },
     resetCounter() {
-      this.correctAnswers = 0;
+      this.correctAnswers = 0
     },
   },
 
@@ -25,8 +25,8 @@ export const useUserStore = defineStore("user", {
     strategies: [
       {
         storage: localStorage,
-        paths: ["name", "correctAnswers"],
+        paths: ['name', 'correctAnswers'],
       },
     ],
   },
-});
+})

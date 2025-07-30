@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import MapboxGlobe from './components/map/MapboxGlobe.vue';
-import LoginModal from './components/modal/LoginModal.vue';
-
+  import MapboxGlobe from './components/map/MapboxGlobe.vue'
+  import LoginModal from './components/modal/LoginModal.vue'
 </script>
 
 <template>
