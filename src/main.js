@@ -1,15 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createRouter, createWebHistory } from 'vue-router'
 import ui from '@nuxt/ui/vue-plugin'
-import './style.css'
 
-const router = createRouter({
-  routes: [],
-  history: createWebHistory()
-})
+// modules
+import pinia from './modules/pinia'
+import router from './modules/router'
+
+// styles
+import './style.css'
 
 const app = createApp(App)
 app.use(ui)
 app.use(router)
+app.use(pinia)
 app.mount('#app')

@@ -14,12 +14,15 @@
     "@tailwindcss/vite": "^4.1.11",
     "lucide-vue-next": "^0.534.0",
     "mapbox-gl": "^3.13.0",
+    "pinia": "^3.0.3",
+    "pinia-plugin-persistedstate": "^4.4.1",
     "tailwindcss": "^4.1.11",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
+    "prettier": "^3.6.2",
     "vite": "^7.0.4"
   }
 }
