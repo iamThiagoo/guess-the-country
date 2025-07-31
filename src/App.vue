@@ -17,7 +17,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import { computed } from 'vue'
   import MapboxGlobe from './components/map/MapboxGlobe.vue'
   import LoginModal from './components/modal/LoginModal.vue'

@@ -1,0 +1,48 @@
+import { defineStore } from 'pinia'
+import countries from '../utils/countries'
+
+export const useGameStore = defineStore('game', {
+  state: () => ({
+    status: 'paused', // 'playing', 'paused'
+    round: 0,
+    correctAnswers: 0,
+    currentCountry: {},
+    previousCountries: [],
+    correctCountries: [],
+  }),
+
+  actions: {
+    setStatus(status) {
+      this.status = status
+    },
+    setRound(round) {
+      this.round = round
+    },
+    setCurrentCountry(country) {
+      this.currentCountry = country
+    },
+    incrementCorrectAnswers() {
+      this.correctAnswers++
+    },
+    addPreviousCountry(country) {
+      this.previousCountries.push(country)
+    },
+    setCorrectCountry(country) {
+      this.correctCountries.push(country)
+    },
+    newRound() {
+      const index = Math.floor(Math.random() * countries.length)
+      console.log(countries[index])
+      this.currentCountry = countries[index]
+      this.previousCountries.push(this.currentCountry)
+    },
+    reset() {
+      this.round = 0
+      this.correctAnswers = 0
+      this.currentCountry = null
+      this.previousCountries = []
+      this.correctCountries = []
+    },
+  },
+  persist: true,
+})

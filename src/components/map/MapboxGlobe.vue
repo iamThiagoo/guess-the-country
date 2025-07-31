@@ -2,15 +2,26 @@
   <div id="map" class="w-full h-full" />
 </template>
 
-<script setup lang="ts">
-  import { onMounted } from 'vue'
+<script setup>
+  import { computed, onMounted, ref, watch } from 'vue'
   import mapboxgl from 'mapbox-gl'
   import 'mapbox-gl/dist/mapbox-gl.css'
+  import { useGameStore } from '../../stores/game'
+
+  const game = useGameStore()
+  const isPlaying = computed(() => game.$state.status === 'playing')
+  const map = ref(null)
+  const spinEnabled = ref(true)
 
   onMounted(() => {
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
-    const map = new mapboxgl.Map({
+    const secondsPerRevolution = 1000
+    const maxSpinZoom = 10
+    const slowSpinZoom = 3
+    let userInteracting = false
+
+    map.value = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [30, 15],
@@ -20,72 +31,140 @@
       antialias: true,
     })
 
-    map.addControl(new mapboxgl.NavigationControl())
-
-    const secondsPerRevolution = 1000
-    const maxSpinZoom = 10
-    const slowSpinZoom = 3
-
-    let userInteracting = false
-    let spinEnabled = true
+    map.value.addControl(new mapboxgl.NavigationControl())
 
     function spinGlobe() {
-      const zoom = map.getZoom()
-      if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+      const zoom = map.value.getZoom()
+      if (spinEnabled.value && !userInteracting && zoom < maxSpinZoom) {
         let distancePerSecond = 360 / secondsPerRevolution
+
         if (zoom > slowSpinZoom) {
           const zoomDif = (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom)
           distancePerSecond *= zoomDif
         }
-        const center = map.getCenter()
+
+        const center = map.value.getCenter()
         center.lng -= distancePerSecond
-        map.easeTo({ center, duration: 1000, easing: n => n })
+        map.value.easeTo({ center, duration: 1000, easing: n => n })
       }
     }
 
-    map.on('styledata', () => {
-      const layers = map.getStyle().layers
+    map.value.on('styledata', () => {
+      const layers = map.value?.getStyle().layers
       if (!layers) return
 
       for (const layer of layers) {
         if (layer.type === 'symbol' && layer.layout && layer.layout['text-field']) {
-          map.setLayoutProperty(layer.id, 'text-field', ['get', 'name_pt'])
+          map.value?.setLayoutProperty(layer.id, 'text-field', ['get', 'name_en'])
         }
+
+        map.value.on('styledata', () => {
+          const layers = map.value?.getStyle().layers
+          if (!layers) return
+
+          for (const layer of layers) {
+            const id = layer.id
+
+            if (
+              layer.type === 'symbol' &&
+              layer.layout?.['text-field'] &&
+              (id.includes('place') ||
+                id.includes('settlement') ||
+                id.includes('capital') ||
+                id.includes('city'))
+            ) {
+              map.value?.setLayoutProperty(id, 'visibility', 'none')
+            }
+
+            if (
+              id.includes('road') ||
+              id.includes('street') ||
+              id.includes('highway') ||
+              id.includes('bridge') ||
+              id.includes('tunnel') ||
+              id.includes('rail') ||
+              id.includes('path') ||
+              id.includes('building') ||
+              id.includes('waterway')
+            ) {
+              map.value?.setLayoutProperty(id, 'visibility', 'none')
+            }
+
+            if (id.includes('admin-1-boundary')) {
+              map.value?.setLayoutProperty(id, 'visibility', 'none')
+            }
+          }
+        })
       }
     })
 
-    map.on('style.load', () => {
-      map.setFog({})
+    map.value.on('style.load', () => {
+      map.value.setFog({})
+
+      map.value.addSource('countries', {
+        type: 'vector',
+        url: 'mapbox://mapbox.country-boundaries-v1',
+      })
+
+      map.value.addLayer({
+        id: 'country-highlight',
+        type: 'fill',
+        source: 'countries',
+        'source-layer': 'country_boundaries',
+        paint: {
+          'fill-color': '#8B5CF6',
+          'fill-opacity': 0.4,
+        },
+        filter: ['==', ['get', 'name_en'], ''],
+      })
     })
 
-    map.on('mousedown', () => (userInteracting = true))
+    map.value.on('mousedown', () => (userInteracting = true))
 
-    map.on('mouseup', () => {
+    map.value.on('mouseup', () => {
       userInteracting = false
       spinGlobe()
     })
 
-    map.on('dragend', () => {
+    map.value.on('dragend', () => {
       userInteracting = false
       spinGlobe()
     })
 
-    map.on('pitchend', () => {
+    map.value.on('pitchend', () => {
       userInteracting = false
       spinGlobe()
     })
 
-    map.on('rotateend', () => {
+    map.value.on('rotateend', () => {
       userInteracting = false
       spinGlobe()
     })
 
-    map.on('moveend', () => {
+    map.value.on('moveend', () => {
       spinGlobe()
     })
 
     spinGlobe()
   })
+
+  watch(isPlaying, playing => {
+    if (playing && map.value) {
+      map.value.zoomTo(4, { duration: 1000 })
+    }
+  })
+
+  watch(
+    () => game.$state.currentCountry,
+    country => {
+      if (country && map.value) {
+        map.value.flyTo({ center: country.coordinates, zoom: 3, duration: 1000 })
+        spinEnabled.value = false
+
+        map.value.setFilter('country-highlight', ['==', ['get', 'name_en'], country.name])
+      }
+    }
+  )
 </script>
 
 <style scoped>

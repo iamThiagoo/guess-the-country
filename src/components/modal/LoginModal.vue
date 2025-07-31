@@ -53,18 +53,20 @@
   </UModal>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import { Rocket } from 'lucide-vue-next'
   import { nextTick, ref, watch, reactive } from 'vue'
   import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
   import { useToast } from '@nuxt/ui/runtime/composables/useToast.js'
   import { useUserStore } from '../../stores/user'
   import * as z from 'zod'
+  import { useGameStore } from '../../stores/game'
 
   const user = useUserStore()
+  const game = useGameStore()
   const toast = useToast()
   const open = ref(true)
-  const nicknameInput = ref<HTMLInputElement | null>(null)
+  const nicknameInput = ref(null)
 
   const form = reactive({
     username: '',
@@ -81,9 +83,12 @@
     username: z.string().min(2, 'Mínimo 2 caracteres').max(100, 'Máximo 100 caracteres'),
   })
 
-  const onSubmit = (values: any) => {
+  const onSubmit = values => {
     const username = values.data.username.trim()
+
     user.setName(username)
+    game.setStatus('playing')
+    game.newRound()
 
     toast.clear()
     toast.add({
