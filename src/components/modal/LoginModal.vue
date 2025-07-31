@@ -39,7 +39,7 @@
 
           <UButton
             size="xl"
-            class="w-full flex justify-center text-center mt-8 mb-2 py-2.5 cursor-pointer"
+            class="w-full flex justify-center text-white bg-violet-800 text-center mt-8 mb-2 py-2.5 cursor-pointer"
             variant="solid"
             color="primary"
             type="submit"
@@ -88,8 +88,9 @@
     toast.clear()
     toast.add({
       title: `Falaa, ${username}!`,
-      description: `Seja muito bem-vindo(a) 👋`,
+      description: `Seja muito bem-vindo(a) ao Guest the Country.`,
       color: 'success',
+      icon: 'i-lucide-hand-metal',
     })
 
     open.value = false

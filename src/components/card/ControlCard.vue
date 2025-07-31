@@ -1,22 +1,24 @@
 <template>
   <div class="fixed left-0 right-0 bottom-6 z-50 flex justify-center">
-    <UCard class="bg-slate-950 text-white w-full max-w-2xl shadow-2xl mx-auto">
-      <div class="flex flex-col gap-2">
-        <div>
+    <UCard class="bg-slate-950 text-white w-full max-w-xl shadow-2xl mx-auto">
+      <form @submit.prevent="onSubmit">
+        <div class="flex flex-col gap-2">
           <div class="flex items-end gap-x-3 justify-between">
             <UFormField label="Qual o nome do país?" class="w-full">
               <UInput
+                v-model="answer"
                 size="xl"
-                placeholder="Informe o nome e pressione Enter ou 'Responder'..."
+                placeholder="Informe o nome do país..."
                 class="w-full"
               />
             </UFormField>
             <UButton
-              class="text-center h-[40px] px-4 text-white bg-violet-600 hover:bg-violet-800 cursor-pointer"
+              type="submit"
+              class="text-center h-[40px] px-4 text-white bg-violet-600 hover:bg-violet-500 cursor-pointer transition-all"
               size="xl"
             >
-              <Send class="size-5 ml-2" />
-              Responder
+              <ConciergeBell class="size-5 ml-2" />
+              Palpitar
             </UButton>
           </div>
 
@@ -29,26 +31,20 @@
             </UButton>
           </div>
         </div>
-      </div>
+      </form>
     </UCard>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { useToast } from '@nuxt/ui/runtime/composables/useToast.js'
+  import { ref } from 'vue'
   import { useUserStore } from '../../stores/user'
-  import { Send, ChevronsRight } from 'lucide-vue-next'
+  import { Send, ChevronsRight, ConciergeBell } from 'lucide-vue-next'
 
   const user = useUserStore()
-  const toast = useToast()
+  const answer = ref('')
 
-  function reset() {
-    user.correctAnswers = 0
-    toast.add({ title: 'Progresso resetado' })
-  }
-
-  function logout() {
-    user.reset()
-    toast.add({ title: 'Você saiu' })
+  const onSubmit = () => {
+    console.log(answer.value)
   }
 </script>

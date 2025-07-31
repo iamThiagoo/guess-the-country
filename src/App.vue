@@ -1,11 +1,17 @@
 <template>
   <div class="h-screen">
-    <UApp>
+    <UApp :toaster="{ position: 'top-center' }">
+      <div class="mx-auto fixed z-50 -top-5 left-4">
+        <img src="/logo.png" alt="Logo" class="w-40 brightness-[100]" />
+      </div>
       <MapboxGlobe />
-
       <div>
-        <LoginModal v-if="!username" />
-        <ControlCard v-else />
+        <template v-if="!username">
+          <LoginModal />
+        </template>
+        <template v-else>
+          <ControlCard />
+        </template>
       </div>
     </UApp>
   </div>

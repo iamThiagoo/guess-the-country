@@ -13,27 +13,14 @@
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v12',
-      center: [0, 0],
-      zoom: 0.5,
+      center: [30, 15],
+      zoom: 0.4,
       minZoom: 0,
-      maxBounds: [
-        [-180, -85],
-        [180, 85],
-      ],
       bearing: 0,
       antialias: true,
     })
 
-    map.on('styledata', () => {
-      const layers = map.getStyle().layers
-      if (!layers) return
-
-      for (const layer of layers) {
-        if (layer.type === 'symbol' && layer.layout && layer.layout['text-field']) {
-          map.setLayoutProperty(layer.id, 'text-field', ['get', 'name_pt'])
-        }
-      }
-    })
+    map.addControl(new mapboxgl.NavigationControl())
 
     const secondsPerRevolution = 1000
     const maxSpinZoom = 10
@@ -56,23 +43,43 @@
       }
     }
 
+    map.on('styledata', () => {
+      const layers = map.getStyle().layers
+      if (!layers) return
+
+      for (const layer of layers) {
+        if (layer.type === 'symbol' && layer.layout && layer.layout['text-field']) {
+          map.setLayoutProperty(layer.id, 'text-field', ['get', 'name_pt'])
+        }
+      }
+    })
+
+    map.on('style.load', () => {
+      map.setFog({})
+    })
+
     map.on('mousedown', () => (userInteracting = true))
+
     map.on('mouseup', () => {
       userInteracting = false
       spinGlobe()
     })
+
     map.on('dragend', () => {
       userInteracting = false
       spinGlobe()
     })
+
     map.on('pitchend', () => {
       userInteracting = false
       spinGlobe()
     })
+
     map.on('rotateend', () => {
       userInteracting = false
       spinGlobe()
     })
+
     map.on('moveend', () => {
       spinGlobe()
     })

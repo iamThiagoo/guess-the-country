@@ -22,13 +22,6 @@ export default defineConfig({
           slots: {
             overlay: 'fixed inset-0 bg-black/80',
           },
-          variants: {
-            fullscreen: {
-              // false: {
-              //   content: `top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100vw-2rem)] max-w-lg max-h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-4rem)] rounded-lg shadow-lg ring ring-slate-800 overflow-hidden`
-              // }
-            },
-          },
         },
       },
     }),

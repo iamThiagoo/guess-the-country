@@ -18,3 +18,8 @@
   --color-green-900: #0a5331;
   --color-green-950: #052e16;
 }
+
+.mapboxgl-ctrl-bottom-right,
+.mapboxgl-ctrl-bottom-left {
+  display: none !important;
+}

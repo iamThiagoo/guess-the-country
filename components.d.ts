@@ -9,6 +9,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ControlCard: typeof import('./src/components/card/ControlCard.vue')['default']
+    ControlsCard: typeof import('./src/components/card/ControlsCard.vue')['default']
+    ControlsModal: typeof import('./src/components/card/ControlsModal.vue')['default']
+    copy: typeof import('./src/components/card/ControlCard copy.vue')['default']
     Login: typeof import('./src/components/modal/Login.vue')['default']
     LoginModa: typeof import('./src/components/modal/LoginModa.vue')['default']
     LoginModal: typeof import('./src/components/modal/LoginModal.vue')['default']
