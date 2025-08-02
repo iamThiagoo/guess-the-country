@@ -22,12 +22,13 @@ Guess the Country é um jogo educativo onde os jogadores precisam adivinhar o no
 
 ## STACK
 
-- Vue 3 w/ Vite, Tailwind, Nuxt UI
-- Mapbox GL
+- Front-End
+  - Vue 3 w/ Vite, Tailwind, Nuxt UI
+  - Mapbox GL
 
 ## RODANDO O PROJETO
 
-- OBS: É necessário ter uma conta no Mapbox e obter uma chave de API para utilizá-la no projeto.
+- OBS: É necessário ter uma conta <a href="https://www.mapbox.com/">Mapbox</a> e obter uma chave de API para utilizá-la no projeto.
 - Para rodar o projeto, você pode rodar localmente ou através do Docker:
     - #### Rodando localmente
     - 
