@@ -1,10 +1,10 @@
-<p align="center">
-  <img src="./public/logo_2.png" width="200" />
-</p>
+<center>
+    <img src="./public/logo_white.png" width="200" style="margin-top: 15px;" />
+</center>
 
-<p align="center">
-  Um jogo interativo para aprendizado geográfico, criado com Mapbox e Vue.js
-</p>
+<center style="margin-top: 15px;">
+    Um jogo interativo para aprendizado geográfico, criado com Mapbox e Vue.js
+</center>
 
 ## PREVIEW
 
