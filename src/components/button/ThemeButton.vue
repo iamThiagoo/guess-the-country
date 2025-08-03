@@ -1,6 +1,6 @@
 <template>
   <UButton
-    class="theme-btn fixed right-1 top-28 inline-block z-10"
+    class="theme-btn fixed right-1 top-28 inline-block z-10 cursor-pointer"
     id="toggleTheme"
     size="md"
     @click="toggleTheme"

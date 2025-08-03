@@ -31,8 +31,14 @@ export const useGameStore = defineStore('game', {
       this.correctCountries.push(country)
     },
     newRound() {
-      const index = Math.floor(Math.random() * countries.length)
-      this.currentCountry = countries[index]
+      let newCountry = countries[Math.floor(Math.random() * countries.length)]
+
+      if (newCountry.name === this.currentCountry.name) {
+        this.newRound()
+        return
+      }
+
+      this.currentCountry = newCountry
       this.previousCountries.push(this.currentCountry)
     },
     checkAnswer(answer) {

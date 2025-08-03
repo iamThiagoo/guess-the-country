@@ -19,9 +19,7 @@ export const useSystemStore = defineStore('system', {
         this.theme === 'light'
           ? 'mapbox://styles/mapbox/streets-v12'
           : 'mapbox://styles/mapbox/dark-v11'
-
-      console.log(this.theme)
-      console.log(this.mapStyle)
     },
   },
+  persist: true,
 })

@@ -147,7 +147,7 @@
 
   const flyToCountry = country => {
     if (username.value && country && map.value && mapIsReady.value) {
-      map.value.flyTo({ center: country.coordinates, zoom: 4, duration: 1500 })
+      map.value.flyTo({ center: country.coordinates, zoom: 3.5, duration: 1500 })
       spinEnabled.value = false
       map.value.setFilter('country-highlight', ['==', ['get', 'name_en'], country.name])
       hideCountryLabel(country.name)
@@ -171,7 +171,7 @@
 
   watch(isPlaying, playing => {
     if (playing && map.value) {
-      map.value.zoomTo(4, { duration: 1000 })
+      map.value.zoomTo(3.5, { duration: 1000 })
     }
   })
 
