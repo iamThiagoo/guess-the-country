@@ -3,6 +3,7 @@
     <UApp :toaster="{ position: 'top-center' }">
       <Loader :show="system.loading" />
       <LogoBackground v-if="username" />
+      <ThemeButton />
       <MapboxGlobe />
       <div v-if="!system.loading">
         <template v-if="!username">
@@ -26,6 +27,7 @@
   import ControlCard from './components/card/ControlCard.vue'
   import Loader from './components/loader/Loader.vue'
   import LogoBackground from './components/logo/LogoBackground.vue'
+  import ThemeButton from './components/button/ThemeButton.vue'
 
   const user = useUserStore()
   const username = computed(() => user.name)

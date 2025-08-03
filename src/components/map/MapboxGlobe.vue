@@ -20,6 +20,7 @@
 
   const isPlaying = computed(() => game.$state.status === 'playing')
   const currentCountry = computed(() => game.$state.currentCountry)
+  const currentMapStyle = computed(() => system.$state.mapStyle)
   const username = computed(() => user.$state.name)
 
   onMounted(() => {
@@ -32,7 +33,7 @@
 
     map.value = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v12',
+      style: currentMapStyle.value,
       center: [30, 15],
       zoom: 0.4,
       minZoom: 0,
@@ -129,6 +130,10 @@
           map.value?.setLayoutProperty(layer.id, 'text-field', ['get', 'name_en'])
         }
       })
+
+      if (currentCountry.value) {
+        flyToCountry(currentCountry.value)
+      }
     })
 
     map.value.on('load', () => {
@@ -168,6 +173,10 @@
     if (playing && map.value) {
       map.value.zoomTo(4, { duration: 1000 })
     }
+  })
+
+  watch(currentMapStyle, mapStyle => {
+    map.value.setStyle(mapStyle)
   })
 
   watch(
