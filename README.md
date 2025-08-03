@@ -9,8 +9,8 @@
 ## PREVIEW
 
 <div style="display: flex; gap: 10px; margin-top: 10px;">
-  <img src="./public/preview/login.png" style="width: 50%; object-fit: cover;" />
-  <img src="./public/preview/example.png" style="width: 50%; object-fit: cover;" />
+  <img src="./public/preview/login.png" style="width: 49%; object-fit: cover;" />
+  <img src="./public/preview/example.png" style="width: 49%; object-fit: cover;" />
 </div>
 
 ## SOBRE
