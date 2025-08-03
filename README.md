@@ -30,26 +30,26 @@ Guess the Country é um jogo educativo onde os jogadores precisam adivinhar o no
 
 - OBS: É necessário ter uma conta <a href="https://www.mapbox.com/">Mapbox</a> e obter uma chave de API para utilizá-la no projeto.
 - Para rodar o projeto, você pode rodar localmente ou através do Docker:
-    - #### Rodando localmente
-    - 
-        ```bash
-        # Clonar o projeto
-        git clone https://github.com/iamThiagoo/guess-the-country-mapbox.git
+  - #### Rodando localmente
+  - ```bash
+    # Clonar o projeto
+    git clone https://github.com/iamThiagoo/guess-the-country-mapbox.git
 
-        # Entrar no diretório
-        cd guess-the-country-mapbox
+    # Entrar no diretório
+    cd guess-the-country-mapbox
 
-        # Instalar as dependências
-        npm install --legacy-peer-deps
+    # Instalar as dependências
+    npm install --legacy-peer-deps
 
-        # Configurar as variáveis de ambiente
-        cp .env.example .env
+    # Configurar as variáveis de ambiente
+    cp .env.example .env
 
-        # Iniciar o projeto
-        npm run dev
-        ```
-    - #### Rodando com Docker
-        - Docker ainda não disponível
+    # Iniciar o projeto
+    npm run dev
+    ```
+
+  - #### Rodando com Docker
+    - Docker ainda não disponível
 
 ## LICENSE
 

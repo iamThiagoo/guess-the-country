@@ -32,9 +32,17 @@ export const useGameStore = defineStore('game', {
     },
     newRound() {
       const index = Math.floor(Math.random() * countries.length)
-      console.log(countries[index])
       this.currentCountry = countries[index]
       this.previousCountries.push(this.currentCountry)
+    },
+    checkAnswer(answer) {
+      if (answer.toLowerCase() === this.currentCountry.name.toLowerCase()) {
+        this.incrementCorrectAnswers()
+        this.setCorrectCountry(this.currentCountry)
+        return true
+      }
+
+      return false
     },
     reset() {
       this.round = 0

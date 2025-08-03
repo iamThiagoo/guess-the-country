@@ -7,11 +7,20 @@
   import mapboxgl from 'mapbox-gl'
   import 'mapbox-gl/dist/mapbox-gl.css'
   import { useGameStore } from '../../stores/game'
+  import { useSystemStore } from '../../stores/system'
+  import { useUserStore } from '../../stores/user'
 
   const game = useGameStore()
-  const isPlaying = computed(() => game.$state.status === 'playing')
+  const system = useSystemStore()
+  const user = useUserStore()
+
   const map = ref(null)
+  const mapIsReady = ref(false)
   const spinEnabled = ref(true)
+
+  const isPlaying = computed(() => game.$state.status === 'playing')
+  const currentCountry = computed(() => game.$state.currentCountry)
+  const username = computed(() => user.$state.name)
 
   onMounted(() => {
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
@@ -45,7 +54,15 @@
 
         const center = map.value.getCenter()
         center.lng -= distancePerSecond
-        map.value.easeTo({ center, duration: 1000, easing: n => n })
+
+        requestAnimationFrame(() => {
+          map.value.easeTo({
+            center,
+            duration: 1000,
+            easing: n => n,
+            essential: true,
+          })
+        })
       }
     }
 
@@ -54,47 +71,36 @@
       if (!layers) return
 
       for (const layer of layers) {
-        if (layer.type === 'symbol' && layer.layout && layer.layout['text-field']) {
-          map.value?.setLayoutProperty(layer.id, 'text-field', ['get', 'name_en'])
+        const id = layer.id
+
+        if (
+          layer.type === 'symbol' &&
+          layer.layout?.['text-field'] &&
+          (id.includes('place') ||
+            id.includes('settlement') ||
+            id.includes('capital') ||
+            id.includes('city'))
+        ) {
+          map.value?.setLayoutProperty(id, 'visibility', 'none')
         }
 
-        map.value.on('styledata', () => {
-          const layers = map.value?.getStyle().layers
-          if (!layers) return
+        if (
+          id.includes('road') ||
+          id.includes('street') ||
+          id.includes('highway') ||
+          id.includes('bridge') ||
+          id.includes('tunnel') ||
+          id.includes('rail') ||
+          id.includes('path') ||
+          id.includes('building') ||
+          id.includes('waterway')
+        ) {
+          map.value?.setLayoutProperty(id, 'visibility', 'none')
+        }
 
-          for (const layer of layers) {
-            const id = layer.id
-
-            if (
-              layer.type === 'symbol' &&
-              layer.layout?.['text-field'] &&
-              (id.includes('place') ||
-                id.includes('settlement') ||
-                id.includes('capital') ||
-                id.includes('city'))
-            ) {
-              map.value?.setLayoutProperty(id, 'visibility', 'none')
-            }
-
-            if (
-              id.includes('road') ||
-              id.includes('street') ||
-              id.includes('highway') ||
-              id.includes('bridge') ||
-              id.includes('tunnel') ||
-              id.includes('rail') ||
-              id.includes('path') ||
-              id.includes('building') ||
-              id.includes('waterway')
-            ) {
-              map.value?.setLayoutProperty(id, 'visibility', 'none')
-            }
-
-            if (id.includes('admin-1-boundary')) {
-              map.value?.setLayoutProperty(id, 'visibility', 'none')
-            }
-          }
-        })
+        if (id.includes('admin-1-boundary')) {
+          map.value?.setLayoutProperty(id, 'visibility', 'none')
+        }
       }
     })
 
@@ -117,36 +123,46 @@
         },
         filter: ['==', ['get', 'name_en'], ''],
       })
+
+      map.value.getStyle().layers.forEach(layer => {
+        if (layer.layout && layer.layout['text-field']) {
+          map.value?.setLayoutProperty(layer.id, 'text-field', ['get', 'name_en'])
+        }
+      })
     })
 
-    map.value.on('mousedown', () => (userInteracting = true))
-
-    map.value.on('mouseup', () => {
-      userInteracting = false
-      spinGlobe()
-    })
-
-    map.value.on('dragend', () => {
-      userInteracting = false
-      spinGlobe()
-    })
-
-    map.value.on('pitchend', () => {
-      userInteracting = false
-      spinGlobe()
-    })
-
-    map.value.on('rotateend', () => {
-      userInteracting = false
-      spinGlobe()
-    })
-
-    map.value.on('moveend', () => {
-      spinGlobe()
+    map.value.on('load', () => {
+      system.setLoading(false)
+      mapIsReady.value = true
+      flyToCountry(currentCountry.value)
     })
 
     spinGlobe()
   })
+
+  const flyToCountry = country => {
+    if (username.value && country && map.value && mapIsReady.value) {
+      map.value.flyTo({ center: country.coordinates, zoom: 4, duration: 1500 })
+      spinEnabled.value = false
+      map.value.setFilter('country-highlight', ['==', ['get', 'name_en'], country.name])
+      hideCountryLabel(country.name)
+    }
+  }
+
+  const hideCountryLabel = countryNameToHide => {
+    const layers = map.value.getStyle().layers
+
+    layers.forEach(layer => {
+      if (layer.layout && layer.layout['text-field']) {
+        map.value.setLayoutProperty(layer.id, 'text-field', [
+          'case',
+          ['==', ['get', 'name_en'], countryNameToHide],
+          '',
+          ['get', 'name_en'],
+        ])
+      }
+    })
+  }
 
   watch(isPlaying, playing => {
     if (playing && map.value) {
@@ -157,13 +173,9 @@
   watch(
     () => game.$state.currentCountry,
     country => {
-      if (country && map.value) {
-        map.value.flyTo({ center: country.coordinates, zoom: 3, duration: 1000 })
-        spinEnabled.value = false
-
-        map.value.setFilter('country-highlight', ['==', ['get', 'name_en'], country.name])
-      }
-    }
+      flyToCountry(country)
+    },
+    { immediate: true, deep: true }
   )
 </script>
 
