@@ -8,6 +8,11 @@
 
 ## PREVIEW
 
+<div style="display: flex; gap: 10px; margin-top: 10px;">
+  <img src="./public/preview/login.png" style="width: 50%; object-fit: cover;" />
+  <img src="./public/preview/example.png" style="width: 50%; object-fit: cover;" />
+</div>
+
 ## SOBRE
 
 Guess the Country é um jogo educativo onde os jogadores precisam adivinhar o nome de países ao redor do mundo. O jogo apresenta um globo interativo 3D usando a biblioteca Mapbox GL, destacando um país aleatório que o jogador deve identificar e assim ganhar pontos.
