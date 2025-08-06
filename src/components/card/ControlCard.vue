@@ -33,7 +33,7 @@
               <ConciergeBell class="size-5 ml-2" />
               Palpitar
             </UButton>
-            <TipButton />
+            <TipButton :class="{ 'mb-7': error || showCorrectMessage }" />
           </div>
 
           <div

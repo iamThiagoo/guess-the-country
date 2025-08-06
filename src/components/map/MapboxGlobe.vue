@@ -149,7 +149,7 @@
     if (username.value && country && map.value && mapIsReady.value) {
       map.value.flyTo({ center: country.coordinates, zoom: 3.5, duration: 1500 })
       spinEnabled.value = false
-      map.value.setFilter('country-highlight', ['==', ['get', 'name_en'], country.name])
+      map.value.setFilter('country-highlight', ['==', ['get', 'name_en'], country.name_en])
       hideCountryLabel(country.name)
     }
   }
@@ -161,9 +161,9 @@
       if (layer.layout && layer.layout['text-field']) {
         map.value.setLayoutProperty(layer.id, 'text-field', [
           'case',
-          ['==', ['get', 'name_en'], countryNameToHide],
+          ['==', ['get', 'name_pt'], countryNameToHide],
           '',
-          ['get', 'name_en'],
+          ['get', 'name_pt'],
         ])
       }
     })
