@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: guess-the-country
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - VITE_MAPBOX_TOKEN=${VITE_MAPBOX_TOKEN}
+    restart: unless-stopped

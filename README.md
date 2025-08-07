@@ -3,6 +3,7 @@
 </div>
 <br>
 <p align="center"> Um jogo interativo para aprendizado geográfico, criado com Mapbox e Vue.js <p>
+<p align="center"> <a href="https://guess-the-country-mapbox.vercel.app/">https://guess-the-country-mapbox.vercel.app/</a> <p>
 
 ## PREVIEW
 
@@ -25,13 +26,12 @@ Guess the Country é um jogo educativo onde os jogadores precisam adivinhar o no
 
 ## STACK
 
-- Front-End
-  - Vue 3 w/ Vite, Tailwind, Nuxt UI
-  - Mapbox GL
+- Vue 3 w/ Vite, Tailwind, Nuxt UI
+- Mapbox GL
 
 ## RODANDO O PROJETO
 
-- OBS: É necessário ter uma conta <a href="https://www.mapbox.com/">Mapbox</a> e obter uma chave de API para utilizá-la no projeto.
+- OBS: É necessário ter uma conta <a href="https://www.mapbox.com/">Mapbox</a> e obter uma chave de API para utilizá-la no projeto. Necessário limitar o uso da sua API para o domínio do projeto se for rodar em produção.
 - Para rodar o projeto, você pode rodar localmente ou através do Docker:
   - #### Rodando localmente
   - ```bash
@@ -49,10 +49,25 @@ Guess the Country é um jogo educativo onde os jogadores precisam adivinhar o no
 
     # Iniciar o projeto
     npm run dev
+
+    # Acessar o projeto
+    http://localhost:5173
     ```
 
   - #### Rodando com Docker
-    - Docker ainda não disponível
+  - ```bash
+    # Clonar o projeto
+    git clone https://github.com/iamThiagoo/guess-the-country-mapbox.git
+
+    # Configurar as variáveis de ambiente
+    cp .env.example .env
+
+    # Iniciar o projeto
+    docker-compose up -d
+
+    # Acessar o projeto
+    http://localhost:5173
+    ```
 
 ## LICENSE
 
