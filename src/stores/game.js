@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import countries from '../utils/countries'
+import { formatCountryName } from '../utils/format'
 
 export const useGameStore = defineStore('game', {
   state: () => ({
@@ -42,7 +43,10 @@ export const useGameStore = defineStore('game', {
       this.previousCountries.push(this.currentCountry)
     },
     checkAnswer(answer) {
-      if (answer.toLowerCase() === this.currentCountry.name.toLowerCase()) {
+      if (
+        formatCountryName(answer.toLowerCase()) ===
+        formatCountryName(this.currentCountry.name.toLowerCase())
+      ) {
         this.incrementCorrectAnswers()
         this.setCorrectCountry(this.currentCountry)
         return true

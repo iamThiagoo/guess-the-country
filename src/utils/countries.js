@@ -315,9 +315,9 @@ const countries = [
     coordinates: [-66.5897, 6.4238],
     tips: [
       'Possui as maiores reservas de petróleo do mundo.',
-      'Tem as Cataratas do Angel, a mais alta queda d\'água do mundo.',
-      'A capital é Caracas.'
-    ]
+      "Tem as Cataratas do Angel, a mais alta queda d'água do mundo.",
+      'A capital é Caracas.',
+    ],
   },
   {
     name: 'Equador',
@@ -326,8 +326,8 @@ const countries = [
     tips: [
       'O nome vem da linha do Equador que corta o país.',
       'As Ilhas Galápagos pertencem ao país.',
-      'Usa o dólar americano como moeda oficial.'
-    ]
+      'Usa o dólar americano como moeda oficial.',
+    ],
   },
   {
     name: 'Uruguai',
@@ -336,8 +336,8 @@ const countries = [
     tips: [
       'Tem uma das menores populações da América do Sul.',
       'Famoso por sua carne e pelo futebol.',
-      'Montevidéu é considerada a cidade com melhor qualidade de vida da região.'
-    ]
+      'Montevidéu é considerada a cidade com melhor qualidade de vida da região.',
+    ],
   },
   {
     name: 'Paraguai',
@@ -346,8 +346,8 @@ const countries = [
     tips: [
       'País sem saída para o mar.',
       'Línguas oficiais são espanhol e guarani.',
-      'Conhecido pela Usina Hidrelétrica de Itaipu.'
-    ]
+      'Conhecido pela Usina Hidrelétrica de Itaipu.',
+    ],
   },
   {
     name: 'Bolívia',
@@ -356,8 +356,8 @@ const countries = [
     tips: [
       'La Paz é a capital mais alta do mundo.',
       'Tem o maior deserto de sal: Salar de Uyuni.',
-      'País sem saída para o mar.'
-    ]
+      'País sem saída para o mar.',
+    ],
   },
   {
     name: 'Costa Rica',
@@ -366,8 +366,8 @@ const countries = [
     tips: [
       'Não tem exército desde 1949.',
       'Pioneira em ecoturismo.',
-      'Tem mais de 25% de seu território como áreas protegidas.'
-    ]
+      'Tem mais de 25% de seu território como áreas protegidas.',
+    ],
   },
   {
     name: 'Panamá',
@@ -376,8 +376,8 @@ const countries = [
     tips: [
       'Canal do Panamá conecta os oceanos Atlântico e Pacífico.',
       'Usa o dólar americano como moeda oficial.',
-      'A capital é a Cidade do Panamá.'
-    ]
+      'A capital é a Cidade do Panamá.',
+    ],
   },
   {
     name: 'Cuba',
@@ -386,8 +386,8 @@ const countries = [
     tips: [
       'Maior ilha do Caribe.',
       'Famosa por seus charutos e rum.',
-      'Último país comunista das Américas.'
-    ]
+      'Último país comunista das Américas.',
+    ],
   },
   {
     name: 'Ucrânia',
@@ -396,8 +396,8 @@ const countries = [
     tips: [
       'Maior país totalmente na Europa.',
       'Terra fértil conhecida como "celeiro da Europa".',
-      'A capital é Kiev.'
-    ]
+      'A capital é Kiev.',
+    ],
   },
   {
     name: 'Polônia',
@@ -406,8 +406,8 @@ const countries = [
     tips: [
       'País com forte tradição católica.',
       'Varsóvia foi quase totalmente reconstruída após a Segunda Guerra.',
-      'Terra natal do Papa João Paulo II.'
-    ]
+      'Terra natal do Papa João Paulo II.',
+    ],
   },
   {
     name: 'Áustria',
@@ -416,8 +416,8 @@ const countries = [
     tips: [
       'Terra de Mozart e Freud.',
       'Alpes ocupam grande parte do território.',
-      'Viena foi capital do Império Austro-Húngaro.'
-    ]
+      'Viena foi capital do Império Austro-Húngaro.',
+    ],
   },
   {
     name: 'Bélgica',
@@ -426,8 +426,8 @@ const countries = [
     tips: [
       'Sede da União Europeia e da NATO.',
       'Famosa por chocolates e cervejas.',
-      'Tem três línguas oficiais: holandês, francês e alemão.'
-    ]
+      'Tem três línguas oficiais: holandês, francês e alemão.',
+    ],
   },
   {
     name: 'Grécia',
@@ -436,8 +436,8 @@ const countries = [
     tips: [
       'Berço da civilização ocidental e da democracia.',
       'Tem milhares de ilhas no Mar Egeu.',
-      'A Acrópole de Atenas é um símbolo mundial.'
-    ]
+      'A Acrópole de Atenas é um símbolo mundial.',
+    ],
   },
   {
     name: 'Dinamarca',
@@ -446,8 +446,8 @@ const countries = [
     tips: [
       'País mais feliz do mundo (segundo vários rankings).',
       'Inclui a Groenlândia e as Ilhas Faroé.',
-      'Copenhague é conhecida por sua arquitetura e bicicletas.'
-    ]
+      'Copenhague é conhecida por sua arquitetura e bicicletas.',
+    ],
   },
   {
     name: 'Finlândia',
@@ -456,8 +456,8 @@ const countries = [
     tips: [
       'Terra do Papai Noel (Lapônia).',
       'País com maior número de lagos em relação ao território.',
-      'Inventou o sauna.'
-    ]
+      'Inventou o sauna.',
+    ],
   },
   {
     name: 'Irlanda',
@@ -466,8 +466,8 @@ const countries = [
     tips: [
       'Conhecida como "Ilha Esmeralda".',
       'Terra de escritores como James Joyce.',
-      'Famosa pelo Guinness e música tradicional.'
-    ]
+      'Famosa pelo Guinness e música tradicional.',
+    ],
   },
   {
     name: 'Quênia',
@@ -476,8 +476,8 @@ const countries = [
     tips: [
       'Famoso pelos safaris e pela Grande Migração.',
       'Terra dos massais.',
-      'Possui praias paradisíacas no Oceano Índico.'
-    ]
+      'Possui praias paradisíacas no Oceano Índico.',
+    ],
   },
   {
     name: 'Etiópia',
@@ -486,8 +486,8 @@ const countries = [
     tips: [
       'Único país africano nunca colonizado.',
       'Considerado o berço da humanidade (Lucy).',
-      'Tem seu próprio calendário e horário.'
-    ]
+      'Tem seu próprio calendário e horário.',
+    ],
   },
   {
     name: 'Gana',
@@ -496,8 +496,8 @@ const countries = [
     tips: [
       'Primeiro país africano a ganhar independência do colonialismo.',
       'Rico em ouro e cacau.',
-      'Conhecido pelos fortes escravos na costa.'
-    ]
+      'Conhecido pelos fortes escravos na costa.',
+    ],
   },
   {
     name: 'Tanzânia',
@@ -506,8 +506,8 @@ const countries = [
     tips: [
       'Lar do Monte Kilimanjaro.',
       'Parque Nacional do Serengeti é famoso mundialmente.',
-      'Zanzibar tem praias paradisíacas.'
-    ]
+      'Zanzibar tem praias paradisíacas.',
+    ],
   },
   {
     name: 'Angola',
@@ -516,8 +516,8 @@ const countries = [
     tips: [
       'Maior produtor de petróleo da África Subsaariana.',
       'Tem o português como língua oficial.',
-      'Rica em diamantes.'
-    ]
+      'Rica em diamantes.',
+    ],
   },
   {
     name: 'Indonésia',
@@ -526,8 +526,8 @@ const countries = [
     tips: [
       'Maior arquipélago do mundo com mais de 17.000 ilhas.',
       'Maior população muçulmana do mundo.',
-      'Bali é um destino turístico famoso.'
-    ]
+      'Bali é um destino turístico famoso.',
+    ],
   },
   {
     name: 'Tailândia',
@@ -536,8 +536,8 @@ const countries = [
     tips: [
       'Único país do sudeste asiático nunca colonizado.',
       'Famoso por suas praias, templos e comida picante.',
-      'Bangkok é uma das cidades mais visitadas do mundo.'
-    ]
+      'Bangkok é uma das cidades mais visitadas do mundo.',
+    ],
   },
   {
     name: 'Vietnã',
@@ -546,8 +546,8 @@ const countries = [
     tips: [
       'Formato alongado como um "S".',
       'Cenário da Guerra do Vietnã.',
-      'Famoso por sua culinária (pho, banh mi).'
-    ]
+      'Famoso por sua culinária (pho, banh mi).',
+    ],
   },
   {
     name: 'Malásia',
@@ -556,8 +556,8 @@ const countries = [
     tips: [
       'Dividida em parte peninsular e insular (Bornéu).',
       'Petronas Towers foram os edifícios mais altos do mundo.',
-      'Diversidade étnica e religiosa.'
-    ]
+      'Diversidade étnica e religiosa.',
+    ],
   },
   {
     name: 'Filipinas',
@@ -566,8 +566,8 @@ const countries = [
     tips: [
       'Arquipélago com mais de 7.000 ilhas.',
       'Terceiro maior país anglófono do mundo.',
-      'Famoso por suas praias e festivais coloridos.'
-    ]
+      'Famoso por suas praias e festivais coloridos.',
+    ],
   },
   {
     name: 'Paquistão',
@@ -576,8 +576,8 @@ const countries = [
     tips: [
       'Terra da civilização do Vale do Indo.',
       'Possui armas nucleares.',
-      'Faz fronteira com China, Índia, Afeganistão e Irã.'
-    ]
+      'Faz fronteira com China, Índia, Afeganistão e Irã.',
+    ],
   },
   {
     name: 'Bangladesh',
@@ -586,8 +586,8 @@ const countries = [
     tips: [
       'Um dos países mais densamente povoados do mundo.',
       'Vulnerável a inundações e mudanças climáticas.',
-      'Grande produtor de tecidos e roupas.'
-    ]
+      'Grande produtor de tecidos e roupas.',
+    ],
   },
   {
     name: 'Irã',
@@ -596,18 +596,14 @@ const countries = [
     tips: [
       'Antiga Pérsia, com história milenar.',
       'Maior produtor de pistache do mundo.',
-      'Tensas relações com países ocidentais.'
-    ]
+      'Tensas relações com países ocidentais.',
+    ],
   },
   {
     name: 'Iraque',
     name_en: 'Iraq',
     coordinates: [43.6793, 33.2232],
-    tips: [
-      'Terra da antiga Mesopotâmia.',
-      'Rico em petróleo.',
-      'Cenário de conflitos recentes.'
-    ]
+    tips: ['Terra da antiga Mesopotâmia.', 'Rico em petróleo.', 'Cenário de conflitos recentes.'],
   },
   {
     name: 'Fiji',
@@ -616,8 +612,8 @@ const countries = [
     tips: [
       'Arquipélago com mais de 300 ilhas.',
       'Destino turístico famoso por praias e mergulho.',
-      'Grande população de origem indiana.'
-    ]
+      'Grande população de origem indiana.',
+    ],
   },
   {
     name: 'Papua-Nova Guiné',
@@ -626,8 +622,8 @@ const countries = [
     tips: [
       'Maior diversidade linguística do mundo (mais de 800 línguas).',
       'Parte da ilha é território da Indonésia.',
-      'Florestas tropicais cobrem grande parte do país.'
-    ]
+      'Florestas tropicais cobrem grande parte do país.',
+    ],
   },
   {
     name: 'Guatemala',
@@ -636,8 +632,8 @@ const countries = [
     tips: [
       'Berço da civilização Maia.',
       'Tem vulcões ativos e ruínas antigas.',
-      'A capital é a Cidade da Guatemala.'
-    ]
+      'A capital é a Cidade da Guatemala.',
+    ],
   },
   {
     name: 'Honduras',
@@ -646,8 +642,8 @@ const countries = [
     tips: [
       'Conhecida por seus recifes de coral.',
       'Tegucigalpa é sua capital.',
-      'Local das Ruínas de Copán.'
-    ]
+      'Local das Ruínas de Copán.',
+    ],
   },
   {
     name: 'El Salvador',
@@ -656,8 +652,8 @@ const countries = [
     tips: [
       'O menor país da América Central.',
       'Usa o dólar americano como moeda.',
-      'Conhecido por suas praias e vulcões.'
-    ]
+      'Conhecido por suas praias e vulcões.',
+    ],
   },
   {
     name: 'Nicarágua',
@@ -666,8 +662,8 @@ const countries = [
     tips: [
       'Tem o maior lago da América Central.',
       'Manágua é sua capital.',
-      'Conhecida por sua biodiversidade.'
-    ]
+      'Conhecida por sua biodiversidade.',
+    ],
   },
   {
     name: 'República Dominicana',
@@ -676,8 +672,8 @@ const countries = [
     tips: [
       'Compartilha a ilha Hispaniola com o Haiti.',
       'Famosa por resorts turísticos.',
-      'Berço do merengue e da bachata.'
-    ]
+      'Berço do merengue e da bachata.',
+    ],
   },
   {
     name: 'Haiti',
@@ -686,8 +682,8 @@ const countries = [
     tips: [
       'Primeira república negra do mundo.',
       'Francês e crioulo são línguas oficiais.',
-      'Sofreu um grande terremoto em 2010.'
-    ]
+      'Sofreu um grande terremoto em 2010.',
+    ],
   },
   {
     name: 'Jamaica',
@@ -696,8 +692,8 @@ const countries = [
     tips: [
       'Terra do reggae e Bob Marley.',
       'Famosa por suas praias e Blue Mountain Coffee.',
-      'Kingston é sua capital.'
-    ]
+      'Kingston é sua capital.',
+    ],
   },
   {
     name: 'República Tcheca',
@@ -706,8 +702,8 @@ const countries = [
     tips: [
       'Praga é uma das cidades mais bonitas da Europa.',
       'Famosa por sua cerveja Pilsner.',
-      'Tem o maior castelo do mundo (Praga).'
-    ]
+      'Tem o maior castelo do mundo (Praga).',
+    ],
   },
   {
     name: 'Hungria',
@@ -716,8 +712,8 @@ const countries = [
     tips: [
       'Budapeste é conhecida como "Paris do Leste".',
       'Invenção do Cubo Mágico (Rubik).',
-      'Termas e banhos termais famosos.'
-    ]
+      'Termas e banhos termais famosos.',
+    ],
   },
   {
     name: 'Romênia',
@@ -726,8 +722,8 @@ const countries = [
     tips: [
       'Terra do Conde Drácula (Castelo de Bran).',
       'Tem a estrada mais bonita do mundo (Transfăgărășan).',
-      'Bucareste é sua capital.'
-    ]
+      'Bucareste é sua capital.',
+    ],
   },
   {
     name: 'Bulgária',
@@ -736,8 +732,8 @@ const countries = [
     tips: [
       'Um dos países mais antigos da Europa.',
       'Inventou o alfabeto cirílico.',
-      'Famosa por seu iogurte e rosas.'
-    ]
+      'Famosa por seu iogurte e rosas.',
+    ],
   },
   {
     name: 'Sérvia',
@@ -746,8 +742,8 @@ const countries = [
     tips: [
       'Belgrado é uma das cidades mais antigas da Europa.',
       'Forte tradição em tênis (Djokovic).',
-      'Cruzamento cultural entre Oriente e Ocidente.'
-    ]
+      'Cruzamento cultural entre Oriente e Ocidente.',
+    ],
   },
   {
     name: 'Croácia',
@@ -756,8 +752,8 @@ const countries = [
     tips: [
       'Famosa por sua costa no Adriático.',
       'Dubrovnik foi cenário de Game of Thrones.',
-      'Tem parques nacionais espetaculares.'
-    ]
+      'Tem parques nacionais espetaculares.',
+    ],
   },
   {
     name: 'Argélia',
@@ -766,8 +762,8 @@ const countries = [
     tips: [
       'Maior país da África em área.',
       'Grande parte é coberta pelo Saara.',
-      'Línguas oficiais: árabe e berbere.'
-    ]
+      'Línguas oficiais: árabe e berbere.',
+    ],
   },
   {
     name: 'Líbia',
@@ -776,8 +772,8 @@ const countries = [
     tips: [
       'Tem as maiores reservas de petróleo da África.',
       'Grande parte é deserto.',
-      'Foi governada por Kadafi por 42 anos.'
-    ]
+      'Foi governada por Kadafi por 42 anos.',
+    ],
   },
   {
     name: 'Tunísia',
@@ -786,8 +782,8 @@ const countries = [
     tips: [
       'Berço da Primavera Árabe.',
       'Ruínas de Cartago são famosas.',
-      'Local de filmagem de Star Wars (Tatooine).'
-    ]
+      'Local de filmagem de Star Wars (Tatooine).',
+    ],
   },
   {
     name: 'Camarões',
@@ -796,8 +792,8 @@ const countries = [
     tips: [
       'Conhecido como "África em miniatura" por sua diversidade.',
       'Fala inglês e francês.',
-      'Boa seleção de futebol.'
-    ]
+      'Boa seleção de futebol.',
+    ],
   },
   {
     name: 'Costa do Marfim',
@@ -806,8 +802,8 @@ const countries = [
     tips: [
       'Maior produtor mundial de cacau.',
       'Abidjan é a capital econômica.',
-      'Forte influência francesa.'
-    ]
+      'Forte influência francesa.',
+    ],
   },
   {
     name: 'Senegal',
@@ -816,8 +812,8 @@ const countries = [
     tips: [
       'Conhecido pela Ilha de Gorée (história da escravidão).',
       'Forte tradição musical.',
-      'Dacar é a capital mais ocidental da África.'
-    ]
+      'Dacar é a capital mais ocidental da África.',
+    ],
   },
   {
     name: 'Cazaquistão',
@@ -826,8 +822,8 @@ const countries = [
     tips: [
       'Maior país sem costa marítima do mundo.',
       'Antiga capital Almaty foi sede dos Jogos Asiáticos.',
-      'Rico em petróleo e minerais.'
-    ]
+      'Rico em petróleo e minerais.',
+    ],
   },
   {
     name: 'Uzbequistão',
@@ -836,8 +832,8 @@ const countries = [
     tips: [
       'Rota da Seda passava por aqui.',
       'Samarcanda e Bukhara são cidades históricas.',
-      'Maior produtor de algodão da Ásia Central.'
-    ]
+      'Maior produtor de algodão da Ásia Central.',
+    ],
   },
   {
     name: 'Nepal',
@@ -846,8 +842,8 @@ const countries = [
     tips: [
       'Tem o Monte Everest, o mais alto do mundo.',
       'Única bandeira não retangular.',
-      'Berço de Buda (Lumbini).'
-    ]
+      'Berço de Buda (Lumbini).',
+    ],
   },
   {
     name: 'Sri Lanka',
@@ -856,8 +852,8 @@ const countries = [
     tips: [
       'Antigo Ceilão, famoso por chá.',
       'Tem elefantes e leopardos.',
-      'Civilização com mais de 3.000 anos.'
-    ]
+      'Civilização com mais de 3.000 anos.',
+    ],
   },
   {
     name: 'Mianmar',
@@ -866,8 +862,8 @@ const countries = [
     tips: [
       'Antiga Birmânia.',
       'Tem milhares de templos budistas.',
-      'Aung San Suu Kyi é sua líder mais famosa.'
-    ]
+      'Aung San Suu Kyi é sua líder mais famosa.',
+    ],
   },
   {
     name: 'Camboja',
@@ -876,8 +872,8 @@ const countries = [
     tips: [
       'Lar de Angkor Wat, maior templo religioso do mundo.',
       'História marcada pelos Khmer Vermelhos.',
-      'Faz fronteira com Tailândia, Vietnã e Laos.'
-    ]
+      'Faz fronteira com Tailândia, Vietnã e Laos.',
+    ],
   },
   {
     name: 'Samoa',
@@ -885,9 +881,9 @@ const countries = [
     coordinates: [-172.1046, -13.759],
     tips: [
       'Primeiro país a ver o nascer do sol.',
-      'Tradição de tatuagens (pe\'a).',
-      'Rugby é o esporte nacional.'
-    ]
+      "Tradição de tatuagens (pe'a).",
+      'Rugby é o esporte nacional.',
+    ],
   },
   {
     name: 'Tonga',
@@ -896,8 +892,8 @@ const countries = [
     tips: [
       'Único reino na Polinésia.',
       'Foi protetorado britânico.',
-      'Primeiro país do Pacífico a ser colonizado.'
-    ]
+      'Primeiro país do Pacífico a ser colonizado.',
+    ],
   },
   {
     name: 'Guiana',
@@ -906,8 +902,8 @@ const countries = [
     tips: [
       'Único país da América do Sul com inglês como língua oficial.',
       'Kaieteur Falls é 5 vezes maior que as Cataratas do Niágara.',
-      'Tem disputa territorial com a Venezuela.'
-    ]
+      'Tem disputa territorial com a Venezuela.',
+    ],
   },
   {
     name: 'Timor-Leste',
@@ -916,8 +912,8 @@ const countries = [
     tips: [
       'Primeira nova nação do século XXI (2002).',
       'Língua oficial é o português.',
-      'Sofreu ocupação indonésia por 24 anos.'
-    ]
+      'Sofreu ocupação indonésia por 24 anos.',
+    ],
   },
   {
     name: 'Suriname',
@@ -926,8 +922,8 @@ const countries = [
     tips: [
       'Único país de língua holandesa nas Américas.',
       'Maior percentual de floresta tropical intacta.',
-      'Capital Paramaribo tem centro histórico colonial.'
-    ]
+      'Capital Paramaribo tem centro histórico colonial.',
+    ],
   },
   {
     name: 'Bielorrússia',
@@ -936,8 +932,8 @@ const countries = [
     tips: [
       'Última ditadura da Europa.',
       'Conhecida como "os pulmões da Europa" por suas florestas.',
-      'Minsk foi quase totalmente reconstruída após a Segunda Guerra.'
-    ]
+      'Minsk foi quase totalmente reconstruída após a Segunda Guerra.',
+    ],
   },
   {
     name: 'Eslováquia',
@@ -946,8 +942,8 @@ const countries = [
     tips: [
       'Separou-se da República Tcheca em 1993.',
       'Tem castelos medievais impressionantes.',
-      'Bratislava fica às margens do Danúbio.'
-    ]
+      'Bratislava fica às margens do Danúbio.',
+    ],
   },
   {
     name: 'Eslovênia',
@@ -956,8 +952,8 @@ const countries = [
     tips: [
       'Tem um litoral minúsculo no Adriático.',
       'Lago Bled é uma atração turística famosa.',
-      'Um dos países mais verdes do mundo.'
-    ]
+      'Um dos países mais verdes do mundo.',
+    ],
   },
   {
     name: 'Lituânia',
@@ -966,8 +962,8 @@ const countries = [
     tips: [
       'Maior país báltico.',
       'Vilnius tem um centro histórico barroco.',
-      'Foi o último país europeu a se converter ao cristianismo.'
-    ]
+      'Foi o último país europeu a se converter ao cristianismo.',
+    ],
   },
   {
     name: 'Letônia',
@@ -976,8 +972,8 @@ const countries = [
     tips: [
       'Riga é conhecida por sua arquitetura Art Nouveau.',
       'Tem uma das mais longas praias da Europa.',
-      'Língua letã é uma das mais antigas da Europa.'
-    ]
+      'Língua letã é uma das mais antigas da Europa.',
+    ],
   },
   {
     name: 'Estônia',
@@ -986,8 +982,8 @@ const countries = [
     tips: [
       'Líder em tecnologia digital (Skype foi criado aqui).',
       'Tem mais de 2.000 ilhas.',
-      'Um dos países menos religiosos do mundo.'
-    ]
+      'Um dos países menos religiosos do mundo.',
+    ],
   },
   {
     name: 'Afeganistão',
@@ -996,8 +992,8 @@ const countries = [
     tips: [
       'Conhecido como "cemitério de impérios".',
       'Rota crucial da antiga Rota da Seda.',
-      'Tem uma das menores expectativas de vida do mundo.'
-    ]
+      'Tem uma das menores expectativas de vida do mundo.',
+    ],
   },
   {
     name: 'Mongólia',
@@ -1006,8 +1002,8 @@ const countries = [
     tips: [
       'Terra de Gengis Khan.',
       'Maior densidade de cavalos por pessoa no mundo.',
-      'Um dos últimos lugares com pastores nômades.'
-    ]
+      'Um dos últimos lugares com pastores nômades.',
+    ],
   },
   {
     name: 'Laos',
@@ -1016,8 +1012,8 @@ const countries = [
     tips: [
       'Único país do sudeste asiático sem costa marítima.',
       'Mais de 4.000 ilhas no rio Mekong.',
-      'Um dos últimos países comunistas do mundo.'
-    ]
+      'Um dos últimos países comunistas do mundo.',
+    ],
   },
   {
     name: 'Butão',
@@ -1026,8 +1022,8 @@ const countries = [
     tips: [
       'Mede a Felicidade Interna Bruta em vez de PIB.',
       'Primeiro país com agricultura 100% orgânica.',
-      'Tem mais monges do que soldados.'
-    ]
+      'Tem mais monges do que soldados.',
+    ],
   },
   {
     name: 'Maldivas',
@@ -1036,8 +1032,8 @@ const countries = [
     tips: [
       'País mais baixo do mundo (média de 1,5m acima do mar).',
       'Pode desaparecer com o aumento do nível do mar.',
-      'Destino de luxo para lua de mel.'
-    ]
+      'Destino de luxo para lua de mel.',
+    ],
   },
   {
     name: 'Brunei',
@@ -1046,8 +1042,8 @@ const countries = [
     tips: [
       'Um dos países mais ricos per capita.',
       'Governado por um sultão absolutista.',
-      'Proíbe consumo público de álcool.'
-    ]
+      'Proíbe consumo público de álcool.',
+    ],
   },
   {
     name: 'Moçambique',
@@ -1056,8 +1052,8 @@ const countries = [
     tips: [
       'Tem praias paradisíacas no Índico.',
       'Língua oficial é o português.',
-      'Rico em recursos naturais mas muito pobre.'
-    ]
+      'Rico em recursos naturais mas muito pobre.',
+    ],
   },
   {
     name: 'Madagascar',
@@ -1066,8 +1062,8 @@ const countries = [
     tips: [
       'Quarta maior ilha do mundo.',
       '80% da vida selvagem é endêmica (como os lêmures).',
-      'Desflorestação ameaça ecossistemas únicos.'
-    ]
+      'Desflorestação ameaça ecossistemas únicos.',
+    ],
   },
   {
     name: 'Zâmbia',
@@ -1076,8 +1072,8 @@ const countries = [
     tips: [
       'Lar das Cataratas Vitória.',
       'Um dos maiores produtores de cobre do mundo.',
-      'Nome vem do rio Zambeze.'
-    ]
+      'Nome vem do rio Zambeze.',
+    ],
   },
   {
     name: 'Zimbábue',
@@ -1086,8 +1082,8 @@ const countries = [
     tips: [
       'Teve hiperinflação recorde em 2008.',
       'Ruínas do Grande Zimbábue são patrimônio mundial.',
-      'Robert Mugabe governou por 37 anos.'
-    ]
+      'Robert Mugabe governou por 37 anos.',
+    ],
   },
   {
     name: 'Sudão',
@@ -1096,8 +1092,8 @@ const countries = [
     tips: [
       'Já foi o maior país da África (antes da divisão).',
       'Tem mais pirâmides que o Egito (mas menos conhecidas).',
-      'Conflitos em Darfur duraram décadas.'
-    ]
+      'Conflitos em Darfur duraram décadas.',
+    ],
   },
   {
     name: 'Belize',
@@ -1106,8 +1102,8 @@ const countries = [
     tips: [
       'Único país da América Central com inglês como língua oficial.',
       'Tem a segunda maior barreira de corais do mundo.',
-      'Ruínas maias de Caracol são impressionantes.'
-    ]
+      'Ruínas maias de Caracol são impressionantes.',
+    ],
   },
   {
     name: 'Bahamas',
@@ -1116,8 +1112,8 @@ const countries = [
     tips: [
       'Arquipélago com 700 ilhas.',
       'Paraíso fiscal e turístico.',
-      'Cristóvão Colombo chegou primeiro aqui no Novo Mundo.'
-    ]
+      'Cristóvão Colombo chegou primeiro aqui no Novo Mundo.',
+    ],
   },
   {
     name: 'Barbados',
@@ -1126,8 +1122,8 @@ const countries = [
     tips: [
       'Terra natal de Rihanna.',
       'Primeiro país caribenho a abolir a escravidão.',
-      'Famoso pelo rum e pelas praias de areia rosa.'
-    ]
+      'Famoso pelo rum e pelas praias de areia rosa.',
+    ],
   },
   {
     name: 'Omã',
@@ -1136,8 +1132,8 @@ const countries = [
     tips: [
       'Único país governado por um sultão absoluto.',
       'Tradição naval histórica.',
-      'Deserto e montanhas impressionantes.'
-    ]
+      'Deserto e montanhas impressionantes.',
+    ],
   },
   {
     name: 'Jordânia',
@@ -1146,8 +1142,8 @@ const countries = [
     tips: [
       'Petra é uma das 7 Maravilhas do Mundo Moderno.',
       'Um dos países mais secos do mundo.',
-      'Abriga campos de refugiados palestinos e sírios.'
-    ]
+      'Abriga campos de refugiados palestinos e sírios.',
+    ],
   },
   {
     name: 'Líbano',
@@ -1156,9 +1152,9 @@ const countries = [
     tips: [
       'Conhecido como "a Suíça do Oriente Médio".',
       'Beirute foi destruída e reconstruída 7 vezes.',
-      'Culinária famosa (como o homus).'
-    ]
-  }
+      'Culinária famosa (como o homus).',
+    ],
+  },
 ]
 
 export default countries
