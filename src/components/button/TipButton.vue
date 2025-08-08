@@ -10,7 +10,7 @@
   >
     <UButton
       type="button"
-      class="text-center h-[40px] px-4 text-amber-300 bg-violet-600 hover:bg-violet-500 cursor-pointer transition-all transform active:scale-99 transition-transform"
+      class="text-center w-[60px] h-[40px] px-4 text-amber-300 bg-violet-600 hover:bg-violet-500 cursor-pointer transition-all transform active:scale-99 transition-transform"
       :class="{ 'mb-7': error || showCorrectMessage }"
       size="xl"
     >

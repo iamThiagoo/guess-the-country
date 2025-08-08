@@ -3,16 +3,16 @@
     :close="false"
     :dismissible="false"
     v-model:open="open"
-    class="!max-w-md ml-6 border-none"
+    class="!max-w-md border-none md:ml-6"
     title="Login"
     description="Informe seu apelido para iniciar o jogo"
   >
     <template #content>
-      <section class="flex flex-col gap-6 p-8 bg-slate-950 rounded-lg shadow-lg">
+      <section class="flex flex-col gap-3 p-8 px-5 bg-slate-950 rounded-lg shadow-lg md:px-8 md:gap-6">
         <div class="text-center flex flex-col items-center">
           <img src="/logo_white.png" class="w-40 -ml-6 mb-4" />
           <h2 class="text-xl text-center font-semibold !text-gray-200">Olá, seja bem-vindo(a),</h2>
-          <h3 class="text-2xl mt-0.5 text-center font-medium !text-violet-400 mb-0">
+          <h3 class="text-lg md:text-2xl mt-0.5 text-center font-medium !text-violet-400 mb-0">
             Para iniciar... defina seu apelido
           </h3>
         </div>

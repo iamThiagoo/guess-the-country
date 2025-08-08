@@ -1,9 +1,9 @@
 <template>
-  <div class="fixed left-0 right-0 bottom-6 z-50 flex justify-center">
+  <div class="fixed left-0 right-0 bottom-2 z-50 flex justify-center mx-2 sm:mx-0 md:bottom-6">
     <UCard class="bg-slate-950 text-white w-full max-w-xl shadow-2xl mx-auto">
       <form @submit.prevent="onSubmit">
         <div class="flex flex-col gap-2">
-          <div class="flex items-end gap-x-3 justify-between">
+          <div class="flex items-end gap-x-3 justify-between flex-col md:flex-row">
             <UFormField
               label="Qual o nome do país?"
               class="w-full"
@@ -24,16 +24,18 @@
                 🎉 Você acertou! Indo para o próximo país...
               </p>
             </UFormField>
-            <UButton
-              type="submit"
-              class="text-center h-[40px] px-4 text-white bg-violet-600 hover:bg-violet-500 cursor-pointer transition-all transform active:scale-99 transition-transform"
-              :class="{ 'mb-7': error || showCorrectMessage }"
-              size="xl"
-            >
-              <ConciergeBell class="size-5 ml-2" />
-              Palpitar
-            </UButton>
-            <TipButton :class="{ 'mb-7': error || showCorrectMessage }" />
+            <div class="flex w-full gap-x-3 mt-4 md:w-auto">
+              <UButton
+                type="submit"
+                class="text-center w-full h-[40px] px-4 text-white bg-violet-600 hover:bg-violet-500 cursor-pointer justify-center transition-all transform active:scale-99 transition-transform"
+                :class="{ 'md:mb-7': error || showCorrectMessage }"
+                size="xl"
+              >
+                <ConciergeBell class="size-5 ml-2" />
+                Palpitar
+              </UButton>
+              <TipButton :class="{ 'md:mb-7': error || showCorrectMessage }" />
+            </div>
           </div>
 
           <div
