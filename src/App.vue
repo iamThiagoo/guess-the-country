@@ -10,7 +10,8 @@
           <LoginModal />
         </template>
         <template v-else>
-          <ControlCard />
+          <EndGameCard v-if="endGame" />
+          <ControlCard v-else />
         </template>
       </div>
     </UApp>
@@ -19,8 +20,9 @@
 
 <script setup>
   import { computed } from 'vue'
-  import { useSystemStore } from './stores/system'
+  import { useGameStore } from './stores/game'
   import { useUserStore } from './stores/user'
+  import { useSystemStore } from './stores/system'
 
   import MapboxGlobe from './components/map/MapboxGlobe.vue'
   import LoginModal from './components/modal/LoginModal.vue'
@@ -28,8 +30,11 @@
   import Loader from './components/loader/Loader.vue'
   import LogoBackground from './components/logo/LogoBackground.vue'
   import ThemeButton from './components/button/ThemeButton.vue'
+  import EndGameCard from './components/card/EndGameCard.vue'
 
   const user = useUserStore()
-  const username = computed(() => user.name)
   const system = useSystemStore()
+  const game = useGameStore()
+  const username = computed(() => user.name)
+  const endGame = computed(() => game.$state.status === 'end')
 </script>

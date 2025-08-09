@@ -4,7 +4,7 @@ import { formatCountryName } from '../utils/format'
 
 export const useGameStore = defineStore('game', {
   state: () => ({
-    status: 'paused', // 'playing', 'paused'
+    status: 'paused', // 'playing', 'paused', 'end
     round: 0,
     correctAnswers: 0,
     currentCountry: {},
@@ -32,13 +32,18 @@ export const useGameStore = defineStore('game', {
       this.correctCountries.push(country)
     },
     newRound() {
-      let newCountry = countries[Math.floor(Math.random() * countries.length)]
+      let available = countries.filter(
+        country =>
+          !this.correctCountries.some(correctCountry => correctCountry.name === country.name) &&
+          country.name !== this.currentCountry?.name
+      )
 
-      if (newCountry.name === this.currentCountry.name) {
-        this.newRound()
+      if (available.length === 0) {
+        this.status = 'end'
         return
       }
 
+      const newCountry = available[Math.floor(Math.random() * available.length)]
       this.currentCountry = newCountry
       this.previousCountries.push(this.currentCountry)
     },
@@ -57,7 +62,7 @@ export const useGameStore = defineStore('game', {
     reset() {
       this.round = 0
       this.correctAnswers = 0
-      this.currentCountry = null
+      this.currentCountry = {}
       this.previousCountries = []
       this.correctCountries = []
     },

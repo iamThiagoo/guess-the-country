@@ -606,26 +606,6 @@ const countries = [
     tips: ['Terra da antiga Mesopotâmia.', 'Rico em petróleo.', 'Cenário de conflitos recentes.'],
   },
   {
-    name: 'Fiji',
-    name_en: 'Fiji',
-    coordinates: [178.065, -17.7134],
-    tips: [
-      'Arquipélago com mais de 300 ilhas.',
-      'Destino turístico famoso por praias e mergulho.',
-      'Grande população de origem indiana.',
-    ],
-  },
-  {
-    name: 'Papua-Nova Guiné',
-    name_en: 'Papua New Guinea',
-    coordinates: [143.9555, -6.3149],
-    tips: [
-      'Maior diversidade linguística do mundo (mais de 800 línguas).',
-      'Parte da ilha é território da Indonésia.',
-      'Florestas tropicais cobrem grande parte do país.',
-    ],
-  },
-  {
     name: 'Guatemala',
     name_en: 'Guatemala',
     coordinates: [-90.2308, 15.7835],
@@ -876,26 +856,6 @@ const countries = [
     ],
   },
   {
-    name: 'Samoa',
-    name_en: 'Samoa',
-    coordinates: [-172.1046, -13.759],
-    tips: [
-      'Primeiro país a ver o nascer do sol.',
-      "Tradição de tatuagens (pe'a).",
-      'Rugby é o esporte nacional.',
-    ],
-  },
-  {
-    name: 'Tonga',
-    name_en: 'Tonga',
-    coordinates: [-175.1982, -21.179],
-    tips: [
-      'Único reino na Polinésia.',
-      'Foi protetorado britânico.',
-      'Primeiro país do Pacífico a ser colonizado.',
-    ],
-  },
-  {
     name: 'Guiana',
     name_en: 'Guyana',
     coordinates: [-58.9302, 4.8604],
@@ -903,16 +863,6 @@ const countries = [
       'Único país da América do Sul com inglês como língua oficial.',
       'Kaieteur Falls é 5 vezes maior que as Cataratas do Niágara.',
       'Tem disputa territorial com a Venezuela.',
-    ],
-  },
-  {
-    name: 'Timor-Leste',
-    name_en: 'Timor-Leste',
-    coordinates: [125.7275, -8.8742],
-    tips: [
-      'Primeira nova nação do século XXI (2002).',
-      'Língua oficial é o português.',
-      'Sofreu ocupação indonésia por 24 anos.',
     ],
   },
   {
@@ -1026,26 +976,6 @@ const countries = [
     ],
   },
   {
-    name: 'Maldivas',
-    name_en: 'Maldives',
-    coordinates: [73.2207, 3.2028],
-    tips: [
-      'País mais baixo do mundo (média de 1,5m acima do mar).',
-      'Pode desaparecer com o aumento do nível do mar.',
-      'Destino de luxo para lua de mel.',
-    ],
-  },
-  {
-    name: 'Brunei',
-    name_en: 'Brunei',
-    coordinates: [114.7277, 4.5353],
-    tips: [
-      'Um dos países mais ricos per capita.',
-      'Governado por um sultão absolutista.',
-      'Proíbe consumo público de álcool.',
-    ],
-  },
-  {
     name: 'Moçambique',
     name_en: 'Mozambique',
     coordinates: [35.5296, -18.6657],
@@ -1113,16 +1043,6 @@ const countries = [
       'Arquipélago com 700 ilhas.',
       'Paraíso fiscal e turístico.',
       'Cristóvão Colombo chegou primeiro aqui no Novo Mundo.',
-    ],
-  },
-  {
-    name: 'Barbados',
-    name_en: 'Barbados',
-    coordinates: [-59.5432, 13.1939],
-    tips: [
-      'Terra natal de Rihanna.',
-      'Primeiro país caribenho a abolir a escravidão.',
-      'Famoso pelo rum e pelas praias de areia rosa.',
     ],
   },
   {
