@@ -11,7 +11,6 @@
     <UButton
       type="button"
       class="text-center w-[60px] h-[40px] px-4 text-amber-300 bg-violet-600 hover:bg-violet-500 cursor-pointer transition-all transform active:scale-99 transition-transform"
-      :class="{ 'mb-7': error || showCorrectMessage }"
       size="xl"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="size-7 fill-amber-300" viewBox="0 0 640 640">
